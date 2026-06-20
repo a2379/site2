@@ -202,19 +202,44 @@ a{color:inherit}</style>
 </head>
 <body>
 <div id="content" class="content">
-<div id="outline-container-org399f10a" class="outline-2">
-<h2 id="org399f10a">Popsicle programming language</h2>
-<div class="outline-text-2" id="text-org399f10a">
+<div id="outline-container-org2445cb8" class="outline-2">
+<h2 id="org2445cb8">Popsicle programming language</h2>
+<div class="outline-text-2" id="text-org2445cb8">
 <p>
 Popsicle is a demoscene-oriented programming language currently under
 development. Planned features include:
 </p>
 
 <ul class="org-ul">
-<li>Small, efficiently-compiled binaries for sizecoding</li>
+<li>Small, efficiently-compiled Linux binaries for sizecoding</li>
 <li>Integrated package manager</li>
 <li>Modular syntax</li>
+<li>Full type inference with typeclass polymorphism</li>
 </ul>
+
+<p>
+Print a greeting with Python-like syntax:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"># ++ (concat)  and join are typeclass functions for strings and lists
+def greet_users(users):
+  "Hello " ++ join(users, " and ")
+
+print(greet_users(["Bob", "Eve", "Alice"]))
+# prints "Hello Bob and Eve and Alice"
+</pre>
+</div>
+
+<p>
+The same code using a Lisp-like infix syntax:
+</p>
+<div class="org-src-container">
+<pre class="src src-scheme">(define (greet-users user-list)
+  ("Hello " ++ (join user-list " and ")))
+
+(print (greet-users '("Bob" "Eve" "Alice")))
+</pre>
+</div>
 
 <p>
 Popsicle is a project of the WEARiSOME demogroup. WEARiSOME is currently looking

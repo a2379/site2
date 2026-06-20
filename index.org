@@ -6,9 +6,28 @@
 Popsicle is a demoscene-oriented programming language currently under
 development. Planned features include:
 
-- Small, efficiently-compiled binaries for sizecoding
+- Small, efficiently-compiled Linux binaries for sizecoding
 - Integrated package manager
 - Modular syntax
+- Full type inference with typeclass polymorphism
+
+Print a greeting with Python-like syntax:
+#+begin_src python
+  # ++ (concat)  and join are typeclass functions for strings and lists
+  def greet_users(users):
+    "Hello " ++ join(users, " and ")
+
+  print(greet_users(["Bob", "Eve", "Alice"]))
+  # prints "Hello Bob and Eve and Alice"
+#+end_src
+
+The same code using a Lisp-like infix syntax:
+#+begin_src scheme
+  (define (greet-users user-list)
+    ("Hello " ++ (join user-list " and ")))
+
+  (print (greet-users '("Bob" "Eve" "Alice")))
+#+end_src
 
 Popsicle is a project of the WEARiSOME demogroup. WEARiSOME is currently looking
 for:
