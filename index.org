@@ -23,8 +23,8 @@ Print a greeting with Python-like syntax:
 
 The same code using a Lisp-like infix syntax:
 #+begin_src scheme
-  (define (greet-users user-list)
-    ("Hello " ++ (join user-list " and ")))
+  (define (greet-users users)
+    ("Hello " ++ (join users " and ")))
 
   (print (greet-users '("Bob" "Eve" "Alice")))
 #+end_src
