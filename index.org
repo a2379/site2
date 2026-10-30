@@ -3,8 +3,8 @@
 
 * Popsicle programming language
 
-Popsicle is a demoscene-oriented programming language currently under
-development. Planned features include:
+Popsicle is a demoscene-oriented programming language.
+Planned features include:
 
 - Small, efficiently-compiled Linux binaries for sizecoding
 - Integrated package manager
@@ -28,16 +28,6 @@ The same code using a Lisp-like infix syntax:
 
   (print (greet-users '("Bob" "Eve" "Alice")))
 #+end_src
-
-Popsicle is a project of the WEARiSOME demogroup. WEARiSOME is currently looking
-for:
-
-- coders
-- musicians
-- visual artists
-
-If you are interested in joining, send an email to wearisome@[this website].
-Please include a link to your Demozoo profile.
 
 #+begin_export html
 <img width=50% src="/assets/popsicle-ad.png">
